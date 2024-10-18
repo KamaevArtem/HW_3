@@ -30,15 +30,20 @@ public class Main {
         System.out.println("На каждого ученика рассчитано " + sheetsPaperOneStudent + " листов бумаги");
         //Задача 4
         byte bottles = 16;
-        byte time = 2;
-        byte efficiency1 = 20;
-        short efficiency2 = 1_440;
-        short efficiency3 = 4_320;
-        int efficiency4 = 43_200;
-        System.out.println("За 20 минут машина произвела " + efficiency1/time*bottles + " штук бутылок" );
-        System.out.println("За сутки машина произвела " + efficiency2/time*bottles + " штук бутылок");
-        System.out.println("за 3 дня машина произвела " + efficiency3/time*bottles + " штук бутылок");
-        System.out.println("за месяц машина произвела " + efficiency4/time*bottles + " штук бутылок");
+        byte timeEfficiencyBottles = 2;
+        int efficiencyBottlesOneMinute = bottles/timeEfficiencyBottles;
+        byte timeInMinutes1 = 20;
+        short timeInMinutes2 = 1_440;
+        short timeInMinutes3 = 4_320;
+        int timeInMinutes4 = 43_200;
+        int efficiencyBottlesTime1 = timeInMinutes1*efficiencyBottlesOneMinute;
+        int efficiencyBottlesTime2 = timeInMinutes2*efficiencyBottlesOneMinute;
+        int efficiencyBottlesTime3 = timeInMinutes3*efficiencyBottlesOneMinute;
+        int efficiencyBottlesTime4 = timeInMinutes4*efficiencyBottlesOneMinute;
+        System.out.println("За 20 минут машина произвела " + efficiencyBottlesTime1 + " штук бутылок" );
+        System.out.println("За сутки машина произвела " + efficiencyBottlesTime2 + " штук бутылок");
+        System.out.println("за 3 дня машина произвела " + efficiencyBottlesTime3 + " штук бутылок");
+        System.out.println("за месяц машина произвела " +efficiencyBottlesTime4 + " штук бутылок");
         //Задача 5
         byte cans = 120;
         byte cansWhitePaint = 2;
